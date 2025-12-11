@@ -8,31 +8,31 @@ class ReplaceTest {
     @Test
     void NordTest() {
         Replace rp = new Replace();
-        assertEquals("Nord", rp.tournePersonne(4));
+        assertEquals(Orientation.Nord, rp.tournePersonne(4));
     }
 
     @Test
     void EstTest() {
         Replace rp = new Replace();
-        assertEquals("Est", rp.tournePersonne(13));
+        assertEquals(Orientation.Est, rp.tournePersonne(13));
     }
 
     @Test
     void SudTest() {
         Replace rp = new Replace();
-        assertEquals("Sud", rp.tournePersonne(26));
+        assertEquals(Orientation.Sud, rp.tournePersonne(26));
     }
 
     @Test
     void OuestTest() {
         Replace rp = new Replace();
-        assertEquals("Ouest", rp.tournePersonne(39));
+        assertEquals(Orientation.Ouest, rp.tournePersonne(39));
     }
 
     @Test
-    void BigTest() {
+    void PassLimitsTest() {
         Replace rp = new Replace();
-        assertEquals("Est", rp.tournePersonne(1001));
+        assertEquals(Orientation.OverLimit, rp.tournePersonne(1001));
     }
 
 }

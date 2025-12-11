@@ -4,22 +4,24 @@ import javax.print.attribute.standard.OrientationRequested;
 
 public class Replace {
 
-    public String tournePersonne(int tourne){
+    public Orientation tournePersonne(int tourne){
 
-        // limiter par les 4 directions
-        tourne = tourne % 4;
-
-        if (tourne == 1){
-            return "Est";
+        // Limiter le nombre de tourne
+        if (tourne <= 50) {
+            // limiter par les 4 directions
+            switch (tourne % 4) {
+                case 1:
+                    return Orientation.Est;
+                case 2:
+                    return Orientation.Sud;
+                case 3:
+                    return Orientation.Ouest;
+                default:
+                    return Orientation.Nord;
+            }
         }
-        else if (tourne == 2){
-            return "Sud";
-        }
-        else if (tourne == 3){
-            return "Ouest";
-        }
-        else{
-            return "Nord";
+        else {
+            return Orientation.OverLimit;
         }
     }
 }
