@@ -14,19 +14,25 @@ class ReplaceTest {
     @Test
     void EstTest() {
         Replace rp = new Replace();
-        assertEquals("Est", rp.tournePersonne(1));
+        assertEquals("Est", rp.tournePersonne(13));
     }
 
     @Test
     void SudTest() {
         Replace rp = new Replace();
-        assertEquals("Sud", rp.tournePersonne(2));
+        assertEquals("Sud", rp.tournePersonne(26));
     }
 
     @Test
     void OuestTest() {
         Replace rp = new Replace();
-        assertEquals("Ouest", rp.tournePersonne(3));
+        assertEquals("Ouest", rp.tournePersonne(39));
+    }
+
+    @Test
+    void BigTest() {
+        Replace rp = new Replace();
+        assertEquals("Est", rp.tournePersonne(1001));
     }
 
 }

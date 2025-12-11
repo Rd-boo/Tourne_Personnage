@@ -5,6 +5,10 @@ import javax.print.attribute.standard.OrientationRequested;
 public class Replace {
 
     public String tournePersonne(int tourne){
+
+        // limiter par les 4 directions
+        tourne = tourne % 4;
+
         if (tourne == 1){
             return "Est";
         }
